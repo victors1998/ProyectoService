@@ -6,11 +6,7 @@
         <title>prueba</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
     </head>
-    <body>
-        <div class="container">
-            <h1> hola soygf  victor</h1>
-            <button class="btn btn-primary">guardar</button>
-        </div>
+    <body>      
         <?php
         echo "hola mendo como estas ";
         ?>
