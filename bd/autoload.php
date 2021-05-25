@@ -2,6 +2,7 @@
 
 spl_autoload_register(function ($nombre_clase){
     $directorys = array(
+      'Controller/',
       'model/',
     
     );
