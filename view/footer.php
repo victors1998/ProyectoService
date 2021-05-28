@@ -3,9 +3,9 @@
         <div class="container">
             <div class="row py-4 d-flex align-items-center">
                 <div class="col-md-12 text-center">
-                    <a href="#"><i class="fab fa-facebook-f text-white mr-4"></i></a>
-                    <a href="#"><i class="fab fa-twitter-square text-white mr-4"></i></a>
-                    <a href="#"><i class="fab fa-google text-white mr-4"></i></a>
+                    <a href="#" data-placement="top" title="Facebook"><i class="fab fa-facebook-f text-white mr-4 "></i></a>
+                    <a href="#" data-placement="top" title="Twiter"><i class="fab fa-twitter-square text-white mr-4"></i></a>
+                    <a href="#" data-placement="top" title="Gmail"><i class="fab fa-google text-white mr-4"></i></a>
                 </div>
             </div> 
         </div>
@@ -13,6 +13,7 @@
 
     <div class="container">
         <div class="row">
+            <hr width=100%  align="right" size=0>
             <div class="col-md-3 mx-auto mb-4">
                 <h6 class="text-uppercase font-weight-bold">Informacion</h6>
                 <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 125px; height: 2px">

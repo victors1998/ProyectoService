@@ -5,11 +5,14 @@ include './header.php';
 <div class="container">
     <div class="row">
         <div class="col-12">
+            <hr width=100%  align="right" size=0>
             <center><h3 class="text-light">¿No sabes Donde Buscar el Producto o Servicio que desees en tu localidad?</h3>
-                <h4 class="text-light">Estas en el lugar gg correcto</h4></center>
+                <h4 class="text-light">Estas en el lugar correcto</h4></center>
+                <hr width=100%  align="right" size=0>
         </div>    
     </div>
 </div>
+
 <div class="container rounded-3">
     <div class="row">      
         <div class="col-12">
@@ -53,9 +56,12 @@ include './header.php';
 $controllerServicio = new ControladorServicio();
 $servicio = $controllerServicio->mostrarServicio();
 ?>
+<hr width=100%  align="right" size=0>
 <div>
     <div class="container rounded-2" style="background: #0F1E23">
+        <hr width=100%  align="right" size=0>	
         <h4 class="text-light">Negocios Recientes</h4>
+        <hr width=100% align="right" size=0>
         <div class="row">
             <?php
             foreach ($servicio as $servi) {
@@ -70,14 +76,16 @@ $servicio = $controllerServicio->mostrarServicio();
                             <p class="card-text"><?php echo $servi['fecha_registro']; ?></p>
                             <a href="#" class="btn btn-primary">Detalles</a>
                         </div>
-                    </div>                 
+                    </div>
+                    <hr width=100%  align="right" size=0>
                 </div>
                 <?php
             }
             ?>
         </div>
     </div>
-    <div class="container">
+    <hr width=100%  align="right" size=0>
+    <div class="container">       
         <div class="row">
             <div class="col-12">
                 <nav aria-label="Page navigation example">
@@ -94,6 +102,7 @@ $servicio = $controllerServicio->mostrarServicio();
                     </ul>
                 </nav>
             </div>
+            <hr width=100%  align="right" size=0>
         </div>
     </div>
     <?php
