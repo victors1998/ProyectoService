@@ -16,29 +16,34 @@
             <div class="col-md-3 mx-auto mb-4">
                 <h6 class="text-uppercase font-weight-bold">Informacion</h6>
                 <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 125px; height: 2px">
-                <p>hola con todos esto es una prueba.com</p>
+                <li>RUC: 20447367727 </li>
+                <li>Razón Social: MUNICIPALIDAD DISTRITAL DE PILLCO MARCA </li>
+                <li>Tipo Empresa: Gobierno Regional, Local </li>
+                <li>Fecha Inicio Actividades: 15 / Abril / 2002 </li>
+                
+
             </div>
             <div class="col-md-3 mx-auto mb-4">
-                <h6 class="text-uppercase font-weight-bold">Productos</h6>
+                <h6 class="text-uppercase font-weight-bold">Ubicacion</h6>
                 <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px">
                 <ul class="list-unstyled">
-                    <li class="my-2"><a href="#">HTML</a></li>
-                    <li class="my-2"><a href="#">HTML</a></li>
+                <li><a href="https://www.google.com/maps/@-9.9608298,-76.2490577,3a,60y,300.75h,93.52t/data=!3m6!1e1!3m4!1sU8I7eTNwf6A_RgOq7Pe41g!2e0!7i13312!8i6656"><i class="fa fa-map-marker"></i> Av. Juan Velazco Alvarado Nro. 1650 neque</a></li>
+                    
                 </ul>
             </div>
             <div class="col-md-3 mx-auto mb-4">
-                <h6 class="text-uppercase font-weight-bold">servicios</h6>
+                <h6 class="text-uppercase font-weight-bold">Nuestras redes</h6>
                 <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 110px; height: 2px">
                 <ul class="list-unstyled">
-                    <li class="my-2"><a href="#">dra rg</a></li>
-                    <li class="my-2"><a href="#">gs rgr</a></li>
+                    <li><a href="https://munipillcomarca.gob.pe"><i class="fa fa-google"></i>Sitio web</a></li>                  
+                    <li><a href="https://www.facebook.com/MunicipalidadPillcoMarca"><i class="fa fa-facebook"></i> Facebook</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="footer-copyright text-center py-3">
         <p>&copy; Copyright
-            <a href="#">esto es un aprueba</a>
+            <a href="https://munipillcomarca.gob.pe">esta pagina esta hecha por la Municipalidad de PillcoMarca</a>
         <p>Pilco Marca - Huánuco - Perú</p>
         </p>
     </div>
