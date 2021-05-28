@@ -26,18 +26,18 @@
         <div class="modal-dialog text-center">
             <div class="col-sm-8 main-section">
                 <div class="modal-content">
-                    <div class="col-12">
+                    <div class="col-12 user-img">
                         <img src="../img/user.png">
                     </div>
                     <form class="col-12">
-                        <div class="form-group">
+                        <div class="form-group" id="user-group">
                             <input class="form-control" type="text" pattern="Ingrese Nombre Usuario">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" id="contrasena-group">
                             <input class="form-control" type="password" pattern="Ingrese Nombre Usuario">
                         </div>
                         <button type="submit" class="btn-info"><i class="fas fa-sign-in-alt"></i>INGRESAR</button>
-                        <div class="col-12">
+                        <div class="col-12 register">
                             <a href="#">Registrarse</a>
                         </div>
                     </form>
