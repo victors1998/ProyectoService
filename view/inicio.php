@@ -6,7 +6,7 @@ include './header.php';
     <div class="row">
         <div class="col-12">
             <center><h3 class="text-light">¿No sabes Donde Buscar el Producto o Servicio que desees en tu localidad?</h3>
-                <h4 class="text-light">Estas en el lugar correcto</h4></center>
+                <h4 class="text-light">Estas en el lugar gg correcto</h4></center>
         </div>    
     </div>
 </div>
