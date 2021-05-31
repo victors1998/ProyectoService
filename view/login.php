@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Font Awesome -->
+        <link REL=StyleSheet HREF="../css/login.css" TYPE="text/css" />
         <link
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
             rel="stylesheet"
@@ -22,30 +23,40 @@
         <title>Buscando Servicio</title>
     </head>
     <body>
-        
-        <div class="modal-dialog text-center">
-            <div class="col-sm-8 main-section">
-                <div class="modal-content">
-                    <div class="col-12 user-img">
+
+        <div class="modal-dialog">
+            <div class="col-sm-8 main-section">   
+                <div class="modal-content container" style="background: #0F1E23">
+                    <div class="col-12 text-center user-img">
                         <img src="../img/user.png">
                     </div>
-                    <form class="col-12">
-                        <div class="form-group" id="user-group">
-                            <input class="form-control" type="text" pattern="Ingrese Nombre Usuario">
+                    <div class="col-12 text-center">
+                        <h4 class="text-center">Bienvenido</h4>
+                    </div>
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
-                        <div class="form-group" id="contrasena-group">
-                            <input class="form-control" type="password" pattern="Ingrese Nombre Usuario">
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>                                              
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-success"><i class="fas fa-sign-in-alt"></i>  Ingresar</button>
                         </div>
-                        <button type="submit" class="btn-info"><i class="fas fa-sign-in-alt"></i>INGRESAR</button>
-                        <div class="col-12 register">
-                            <a href="#">Registrarse</a>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label"><a href="#" class="link-info">Se me Olvido la contraseña</a></label>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label"><a href="registrarUsuario.php" class="link-success">Registrarse</a></label>
                         </div>
                     </form>
-                </div>
+
+                </div>                                                              
             </div>
         </div>
-        
-        
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
         ></script>
