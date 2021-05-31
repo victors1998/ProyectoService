@@ -1,5 +1,5 @@
 body{
-    background: url(../img/fondo_login.jpeg) no-repeat center center fixed;
+    background: url(../img/fondo_login.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 .main-section{
@@ -15,4 +15,5 @@ body{
     width: 100px;
     height: 100px;
 }
+
 
