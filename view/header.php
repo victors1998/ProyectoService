@@ -19,7 +19,7 @@
             rel="stylesheet"
             />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <title>Buscando Servicio funciona?</title>
+        <title>Buscando Servicio</title>
     </head>
     <body style="background: #203A44">
         <!--inicio de nav bar-->
@@ -36,7 +36,7 @@
                         </li>                       
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Categorias 1                               
+                                Categorias                                
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item text-light" href="#">Mecanica</a></li>
