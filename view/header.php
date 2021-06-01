@@ -36,7 +36,7 @@
                         </li>                       
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Categorias                               
+                                Categorias 1                               
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item text-light" href="#">Mecanica</a></li>
