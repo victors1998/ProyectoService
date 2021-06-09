@@ -42,7 +42,7 @@ if (isset($_POST['ingresar'])) {
             rel="stylesheet"
             />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <title>Login NL</title>
+        <title>Iniciar sesión</title>
     </head>
     <body>
         <div class="modal-dialog">
@@ -51,23 +51,23 @@ if (isset($_POST['ingresar'])) {
                     <div class="col-12 text-center user-img">
                         <img src="../img/user.png">
                     </div>
-                    <div class="col-12 text-center">
-                        <h4 class="text-center">Bienvenido</h4>
+                    <div class="col-12 text-center" COLOR="white">
+                        <h4 class="text-center" >Bienvenido</h4>
                     </div>
                     <form method="POST">
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input name="user" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <FONT COLOR="white">Correo electronico </FONT>
+                            <input name="user" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su correo electrónico">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input name="pass" type="password" class="form-control" id="exampleInputPassword1">
+                        <FONT COLOR="white">Contraseña </FONT>
+                            <input name="pass" type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese su contraseña">
                         </div>                                              
                         <div class="mb-3">
                             <button name="ingresar" type="submit" class="btn btn-success"><i class="fas fa-sign-in-alt"></i>  Ingresar</button>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label"><a href="#" class="link-info">Se me Olvido la contraseña</a></label>
+                            <label for="exampleInputPassword1" class="form-label"><a href="#" class="link-info">¿Se te olvido la contraseña?</a></label>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label"><a href="registrarUsuario.php" class="link-success">Registrarse</a></label>

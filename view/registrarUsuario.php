@@ -44,37 +44,37 @@ if (isset($_POST['nuevo'])) {
                                 <div class="mb-3 row">
                                     <label for="staticEmail" class="col-sm-4 col-form-label font-weight-bold">Nombres:</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="nombres" placeholder="Victor Oliver" >
+                                        <input type="text" class="form-control" name="nombres" placeholder="Ingrese su nombre" >
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="inputPassword" class="col-sm-4 col-form-label">Apellidos:</label>
+                                    <label for="inputPassword" class="col-sm-4 col-form-label font-weight-bold">Apellidos:</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="apellidos" placeholder="Eusebio Soto">
+                                        <input type="text" class="form-control" name="apellidos" placeholder="Ingrese sus apellidos">
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="staticEmail" class="col-sm-4 col-form-label">Nombre Usuario:</label>
+                                    <label for="staticEmail" class="col-sm-4 col-form-label font-weight-bold">Nombre Usuario:</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="userName" placeholder="@victorSoto" >
+                                        <input type="text" class="form-control" name="userName" placeholder="Cree nombre de usuario" >
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="staticEmail" class="col-sm-4 col-form-label">Dni:</label>
+                                    <label for="staticEmail" class="col-sm-4 col-form-label font-weight-bold">Dni:</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="dni" placeholder="73515797" >
+                                        <input type="text" class="form-control" name="dni" placeholder="Ingrese su DNI" >
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="staticEmail" class="col-sm-4 col-form-label">Telefono:</label>
+                                    <label for="staticEmail" class="col-sm-4 col-form-label font-weight-bold">Telefono:</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="telefono" placeholder="902358655" >
+                                        <input type="text" class="form-control" name="telefono" placeholder="Ingrese su número de celular" >
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="staticEmail" class="col-sm-4 col-form-label">Contraseña:</label>
+                                    <label for="staticEmail" class="col-sm-4 col-form-label font-weight-bold">Contraseña:</label>
                                     <div class="col-sm-8">
-                                        <input type="password" class="form-control" name="password" placeholder="*******" >
+                                        <input type="password" class="form-control" name="password" placeholder="Cree una contraseña" >
                                     </div>
                                 </div> 
                                 <div class="mb-3 row">                                   
