@@ -8,7 +8,7 @@ include './header.php';
             <hr width=100%  align="right" size=0>
             <center><h3 class="text-light">¿No sabes Donde Buscar el Producto o Servicio que desees en tu localidad?</h3>
                 <h4 class="text-light">Estas en el lugar correcto</h4></center>
-                <hr width=100%  align="right" size=0>
+            <hr width=100%  align="right" size=0>
         </div>    
     </div>
 </div>
@@ -52,59 +52,29 @@ include './header.php';
         </div>
     </div>
 </div>
-<?php
-$controllerServicio = new ControladorServicio();
-$servicio = $controllerServicio->mostrarServicio();
-?>
-<hr width=100%  align="right" size=0>
-<div>
-    <div class="container rounded-2" style="background: #0F1E23">
-        <hr width=100%  align="right" size=0>	
-        <h4 class="text-light">Negocios Recientes</h4>
-        <hr width=100% align="right" size=0>
-        <div class="row">
-            <?php
-            foreach ($servicio as $servi) {
-                ?>
-                <div class="col-4">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="../img/logo.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $servi['idServicio']; ?></h5>
-                            <p class="card-text"><?php echo $servi['titulo']; ?></p>
-                            <p class="card-text"><?php echo $servi['descripcion']; ?></p>
-                            <p class="card-text"><?php echo $servi['fecha_registro']; ?></p>
-                            <a href="#" class="btn btn-primary">Detalles</a>
-                        </div>
-                    </div>
-                    <hr width=100%  align="right" size=0>
+<div class="container rounded-3">
+    <div class="row">      
+        <div class="col-12">
+            <hr width=100%  align="right" size=0>
+            <div class="card" style="width: 18rem;">
+                <img src="../img/segundoNegocio.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Zapateria Lopez</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <form method="POST">
+                        <button name="detalle" type="submit" class="btn btn-primary">Mas Detalles</button>
+                    </form>
+                    <?php
+                    if (isset($_POST['detalle'])) {
+                        header("Location: ../view/detalleNegocios.php");
+                    }
+                    ?>
                 </div>
-                <?php
-            }
-            ?>
-        </div>
-    </div>
-    <hr width=100%  align="right" size=0>
-    <div class="container">       
-        <div class="row">
-            <div class="col-12">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-end">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1">Previous</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
             <hr width=100%  align="right" size=0>
         </div>
     </div>
-    <?php
-    include './footer.php';
-    ?>
+</div>
+<?php
+include './footer.php';
+?>

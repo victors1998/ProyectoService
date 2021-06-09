@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -51,24 +55,29 @@
                     </ul>
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Buscar Servicio" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button class="btn btn-outline-success me-2" type="submit">Search</button>                      
                     </form>
-                    <button type="button"  class="btn btn-success"><a href="login.php">Iniciar Sesión</a></button>
-                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-<!--                        <button type="button" class="btn btn-primary">1</button>
-                        <button type="button" class="btn btn-primary">2</button>-->
-
-                        <div class="btn-group" role="group">
-                            <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-                                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-                            </ul>
-                        </div>
+                    <form class="d-flex" method="POST">
+                        <button class="btn btn-outline-success me-2" name="sesion" type="submit">Iniciar Sesion</button>                      
+                    </form>
+                    <?php
+                    if (isset($_POST['sesion'])) {
+                        header("Location: ../view/login.php");
+                    }
+                    ?>
+                    <div class="btn-group me-5">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                            <?php echo $_SESSION['idUs']; ?> <img src="../img/user.png" class="img-fluid" width="28px" height="28px">
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                            <li><button class="dropdown-item" type="button">Action</button></li>
+                            <li><button class="dropdown-item" type="button">Another action</button></li>
+                            <li><button class="dropdown-item" type="button">Something else here</button></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
+
 

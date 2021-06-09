@@ -1,3 +1,25 @@
+<?php
+session_start();
+if (isset($_POST['ingresar'])) {
+    include '../model/Usuarios.php';
+    $empleado = new Usuarios();
+    $empleado->setUserName($_POST['user']);
+    $empleado->setPassword($_POST['pass']);
+    if ($empleado->ValidarUsuario()) {
+        $_SESSION['idUs'] = $empleado->getIdUsuario();
+        $_SESSION['nom'] = $empleado->getNombres();
+        $_SESSION['ape'] = $empleado->getApellidos();
+        $_SESSION['tipUs'] = $empleado->getTipoUsuario();
+        $_SESSION['est'] = $empleado->getEstado();
+        $_SESSION['dni'] = $empleado->getDni();
+        $_SESSION['fechReg'] = $empleado->getFechaRegistro();
+        header("Location: ../view/inicioLogueado.php");
+    } else {
+        header("Location: ../view/login.php");
+    }
+}
+?>
+
 <!doctype html>
 <html lang="es">
     <head>
@@ -23,7 +45,6 @@
         <title>Login NL</title>
     </head>
     <body>
-
         <div class="modal-dialog">
             <div class="col-sm-8 main-section">   
                 <div class="modal-content container" style="background: #0F1E23">
@@ -33,17 +54,17 @@
                     <div class="col-12 text-center">
                         <h4 class="text-center">Bienvenido</h4>
                     </div>
-                    <form>
+                    <form method="POST">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input name="user" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <input name="pass" type="password" class="form-control" id="exampleInputPassword1">
                         </div>                                              
                         <div class="mb-3">
-                            <button type="submit" class="btn btn-success"><i class="fas fa-sign-in-alt"></i>  Ingresar</button>
+                            <button name="ingresar" type="submit" class="btn btn-success"><i class="fas fa-sign-in-alt"></i>  Ingresar</button>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label"><a href="#" class="link-info">Se me Olvido la contraseña</a></label>
