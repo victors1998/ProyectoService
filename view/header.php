@@ -1,4 +1,5 @@
 <?php
+include '../bd/autoload.php';
 session_start();
 ?>
 
@@ -67,17 +68,26 @@ session_start();
                     ?>
                     <div class="btn-group me-5">
                         <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                            <?php echo $_SESSION['idUs']; ?> <img src="../img/user.png" class="img-fluid" width="28px" height="28px">
+                            <?php echo $_SESSION['nom']; ?> <img src="../img/user.png" class="img-fluid" width="28px" height="28px">
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                            <form method="POST">
                             <li><button class="dropdown-item" type="button">Action</button></li>
                             <li><button class="dropdown-item" type="button">Another action</button></li>
-                            <li><button class="dropdown-item" type="button">Something else here</button></li>
+                            <li><button name="cerrar" class="dropdown-item" type="submit">Cerrar Sesión</button></li>
+                            </form>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
+
+    <?php
+    if (isset($_POST['cerrar'])) {       
+        header("Location: ../view/inicio.php");
+        session_destroy();
+    }
+    ?>
 
 
