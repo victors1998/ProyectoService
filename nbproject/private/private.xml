@@ -3,12 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/ProyectoService/Controller/ControllerNegocio.php</file>
             <file>file:/C:/xampp/htdocs/ProyectoService/view/login.php</file>
-            <file>file:/C:/xampp/htdocs/ProyectoService/model/Negocio.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoService/view/detalleNegocios.php</file>
             <file>file:/C:/xampp/htdocs/ProyectoService/view/inicioLogueado.php</file>
-            <file>file:/C:/xampp/htdocs/ProyectoService/view/inicio.php</file>
-            <file>file:/C:/xampp/htdocs/ProyectoService/Controller/ControllerUsuarios.php</file>
         </group>
     </open-files>
 </project-private>

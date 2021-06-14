@@ -17,13 +17,13 @@ include './header.php';
                         <hr width=100%  align="right" size=0>
                         <div class="card" style="width: 15rem; height: 22rem;">
                             <img src="../img/primerNegocio.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 hidden="" class="card-title"><?php echo $neg['idnegocio'] ?></h5>
+                            <div class="card-body" style="height: 100px">
+                                <h5 class="card-title"><?php echo $neg['idnegocio'] ?></h5>
                                 <h5 class="card-title"><?php echo $neg['nombre'] ?></h5>
                                 <p class="card-text"><b>Dirección :</b><?php echo $neg['direccion'] ?></p>                           
                             </div>
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Mas Detalles</button>
+                                <a type="submit" href="inicioLogueado.php" name="detalles" class="btn btn-primary">Mas Detalles</a>
                             </div>
                         </div>
                         <hr width=100%  align="right" size=0>
@@ -51,10 +51,7 @@ include './header.php';
             <div class="row" style="margin-right: 2px;margin-left: 2px; margin-top: 30px;margin-bottom: 10px">
                 <div class="col col-lg-12 rounded-3" style="background:#0F1E23">
                     <h4 class="text-white"><i class="fas fa-house-user"></i> Mis Acciones</h4>
-                    <h5>Crear Nuevo Negocio</h5>
-                    <h5>esto es una prueba</h5>
-                    <h5>romeo y julieta</h5>
-                    <h5>Todo o nada</h5>
+                    <h5 class="text-white"><a href="#"> Crear Nuevo </a></h5>                   
                 </div>
             </div> 
             <div class="row" style="margin-right: 2px;margin-left: 2px; margin-top: 10px;margin-bottom: 30px">
