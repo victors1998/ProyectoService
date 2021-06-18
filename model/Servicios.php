@@ -1,5 +1,7 @@
 <?php
+
 class Servicios {
+
     private $idServicio;
     private $titulo;
     private $descripcion;
@@ -7,7 +9,8 @@ class Servicios {
     private $Usuario;
     private $fechaRegistro;
     private $categoria;
-    
+    private $idNegocio;
+
     function getIdServicio() {
         return $this->idServicio;
     }
@@ -34,6 +37,10 @@ class Servicios {
 
     function getCategoria() {
         return $this->categoria;
+    }
+
+    function getIdNegocio() {
+        return $this->idNegocio;
     }
 
     function setIdServicio($idServicio): void {
@@ -63,7 +70,11 @@ class Servicios {
     function setCategoria($categoria): void {
         $this->categoria = $categoria;
     }
-    
+
+    function setIdNegocio($idNegocio): void {
+        $this->idNegocio = $idNegocio;
+    }
+
     function MostrarServicios() {
         require_once '../bd/ConexionDB.php';
         $conexionDB = new ConexionDB();
@@ -73,5 +84,24 @@ class Servicios {
         return $conn->query($sql);
     }
 
+    function MostrarServiciosPorIdNegocio($id) {
+        require_once '../bd/ConexionDB.php';
+        $conexionDB = new ConexionDB();
+        $conn = $conexionDB->abrirConexion();
+        $sql = "SELECT s.idServicio, s.titulo, s.descripcion, c.nombre_categoria, s.idnegocio
+                FROM servicio as s INNER JOIN
+                categoria as c ON s.id_categoria=c.idcategoria WHERE s.idServicio=" . $id;
+        $conexionDB->cerrarConexion();
+        return $conn->query($sql);
+    }
+    
+    function MostrarServiciosPorIdCategoria($id) {
+        require_once '../bd/ConexionDB.php';
+        $conexionDB = new ConexionDB();
+        $conn = $conexionDB->abrirConexion();
+        $sql = "SELECT * FROM servicio WHERE id_categoria=".$id;
+        $conexionDB->cerrarConexion();
+        return $conn->query($sql);
+    }
 
 }

@@ -2,79 +2,53 @@
 include "../bd/autoload.php";
 include './header.php';
 ?>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-12">
-            <hr width=100%  align="right" size=0>
-            <center><h3 class="text-light">¿No sabes Donde Buscar el Producto o Servicio que desees en tu localidad?</h3>
-                <h4 class="text-light">Estas en el lugar correcto</h4></center>
-            <hr width=100%  align="right" size=0>
-        </div>    
-    </div>
-</div>
-
-<div class="container rounded-3">
-    <div class="row">      
-        <div class="col-12">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../img/thumb-1920-136344.jpg" class="d-block w-100" style="height: 350px" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/images.jpg" class="d-block w-100" style="height: 350px" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/descarga.jpg" class="d-block w-100" style="height: 350px" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container rounded-3">
-    <div class="row">      
-        <div class="col-12">
-            <hr width=100%  align="right" size=0>
-            <div class="card" style="width: 18rem;">
-                <img src="../img/segundoNegocio.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Zapateria Lopez</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <form method="POST">
-                        <button name="detalle" type="submit" class="btn btn-primary">Mas Detalles</button>
-                    </form>
-                    <?php
-                    if (isset($_POST['detalle'])) {
-                        header("Location: ../view/detalleNegocios.php");
-                    }
+        <div class="col-md-10">
+            <div class="row rounded-3" style="margin-right: 5px;margin-left: 50px; margin-top: 30px;margin-bottom: 30px; background:#0F1E23">
+                <hr width=100%  align="right" size=0>
+                <h4 class="text-white"><i class="fas fa-house-user"></i> Publicaciones Recientes</h4>
+                <?php
+                $contServicios = new ControladorServicio();
+                $servicio = $contServicios->mostrarServicio();
+                foreach ($servicio as $ser) {
                     ?>
+                    <div class="col-3">                   
+                        <hr width=100%  align="right" size=0>
+                        <div class="card" style="width: 15rem; height: 22rem;">
+                            <img src="../img/<?php echo $ser['imagen1'];?>" class="card-img-top" alt="...">
+                            <div class="card-body" style="height: 100px">
+                                <center><h6 class="card-text"><?php echo $ser['titulo'] ?></h6></center>
+                                <p><b>Descripción:</b> <?php echo $ser['descripcion'] ?></p>
+                                <p><b>F.Publicación: </b><?php echo $ser['fecha_registro'] ?></p>                           
+                            </div>
+                            <div class="card-footer">
+                                <a type="submit" href="detalleNegocios.php?idP=<?php echo $ser['idServicio']; ?>" name="detalles" class="btn btn-primary">Mas Detalles</a>
+                            </div>
+                        </div>
+                        <hr width=100%  align="right" size=0>
+                    </div>
+                <?php } ?>
+            </div>           
+        </div>
+        <div class="col-md-2"> 
+            <div class="row" style="margin-right: 2px;margin-left: 2px; margin-top: 30px;margin-bottom: 30px">
+                <div class="col col-lg-12 rounded-3" style="background:#0F1E23">
+                    <h4 class="text-white"><i class="fas fa-house-user"></i> Categorias</h4>
+                    <?php
+                    $contCategoria = new ControllerCategoria();
+                    $cat = $contCategoria->mostrarCategoria();
+                    foreach ($cat as $categoria) {
+                        ?>
+                    <a href="mostrarPorCategoria.php?idC=<?php echo $categoria['idcategoria'] ?>"
+                       class="text-white border-bottom"><?php echo $categoria['nombre_categoria'] ?></a></br>
+                    <?php } ?>
                 </div>
-            </div>
-            <hr width=100%  align="right" size=0>
+            </div>           
         </div>
     </div>
 </div>
 <?php
 include './footer.php';
 ?>
+

@@ -6,4 +6,9 @@ class ControllerCategoria {
         $categoria = new Categorias();
         return $categoria->MostrarCategoria();
     }
+    
+    public function mostrarCategoriaPorId($id) {
+        $categoria = new Categorias();
+        return $categoria->MostrarCategoriaPorId($id);
+    }
 }

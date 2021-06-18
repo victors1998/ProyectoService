@@ -43,14 +43,8 @@ session_start();
                             <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Categorias                                
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <?php
-                                $contCategoria = new ControllerCategoria();
-                                $cat = $contCategoria->mostrarCategoria();
-                                foreach ($cat as $categoria) {
-                                    ?>
-                                    <li><a class="dropdown-item" href="#"><?php echo $categoria['nombre_categoria'] ?></a></li>  
-                                <?php } ?>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">                               
+                                    <li><a class="dropdown-item" href="#">vic</a></li>                                 
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -60,7 +54,7 @@ session_start();
                         <form class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Buscar Servicio" aria-label="Search">
                             <button class="btn btn-outline-success me-2" type="submit">Search</button>                      
-                        </form>                 
+                        </form>
                         <form class="d-flex" method="POST">
                             <button class="btn btn-outline-success me-2" name="sesion" type="submit">Iniciar Sesion</button>                      
                         </form>
@@ -69,20 +63,15 @@ session_start();
                             header("Location: ../view/login.php");
                         }
                         ?>
-                        <div class="btn-group me-5">                           
+                        <div class="btn-group me-5">
                             <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                            <?php
-                            if($_SESSION['nom'] != "undefined"){
-                                echo $_SESSION['nom'];
-                            }                                                                 
-                            ?>
                                 <img src="../img/user.png" class="img-fluid" width="28px" height="28px">
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
                                 <form method="POST">
                                     <li><button class="dropdown-item" type="button">Action</button></li>
                                     <li><button class="dropdown-item" type="button">Another action</button></li>
-                                    <li><button name="cerrar" class="dropdown-item" type="submit">Cerrar Sesión</button></li>
+                                    <li><a href="inicio.php <?php session_destroy()?>" class="dropdown-item">Cerrar Sesión</a></li>
                                 </form>
                             </ul>
                         </div>
@@ -90,12 +79,3 @@ session_start();
                 </div>
             </div>
         </nav>
-
-        <?php
-        if (isset($_POST['cerrar'])) {
-            header("Location: ../view/inicio.php");
-            session_destroy();
-        }
-        ?>
-
-

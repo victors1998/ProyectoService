@@ -37,4 +37,13 @@ class Categorias {
         $conexionDB->cerrarConexion();
         return $conn->query($sql);
     }
+    
+    function MostrarCategoriaPorId($id) {
+        require_once '../bd/ConexionDB.php';
+        $conexionDB = new ConexionDB();
+        $conn = $conexionDB->abrirConexion();
+        $sql = "SELECT * FROM categoria WHERE idcategoria=".$id;
+        $conexionDB->cerrarConexion();
+        return $conn->query($sql);
+    }
 }
