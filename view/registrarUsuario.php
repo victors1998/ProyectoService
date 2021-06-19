@@ -28,7 +28,7 @@ if (isset($_POST['nuevo'])) {
             rel="stylesheet"
             />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <title>Buscando Servicio</title>
+        <title>Registrar usuario</title>
     </head>
     <body>
         <div class="container">
@@ -36,43 +36,43 @@ if (isset($_POST['nuevo'])) {
                 <div class="col-3">
 
                 </div>
-                <div class="col-6 border border-dark rounded" style="margin-top: 100px">
+                <div class="col-6 border border-white rounded" style="margin-top: 100px">
                     <div class="box boxmx-auto-info">
-                        <div class="box-header with-border">
-                            <center> <h3 class="box-title">Registro de Usuario</h3></center>
+                        <div class="modal-content container" style="background: #0F1E23">
+                            <center> <h3 class="box-title" style="color: white">Registro de Usuario</h3></center>
                             <form method="POST">
                                 <div class="mb-3 row">
-                                    <label for="staticEmail" class="col-sm-4 col-form-label font-weight-bold">Nombres:</label>
+                                    <label for="staticEmail" class="col-sm-4 col-form-label font-weight-bold" style="color: white">Nombres:</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" name="nombres" placeholder="Ingrese su nombre" >
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="inputPassword" class="col-sm-4 col-form-label font-weight-bold">Apellidos:</label>
+                                    <label for="inputPassword" class="col-sm-4 col-form-label font-weight-bold" style="color: white">Apellidos:</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" name="apellidos" placeholder="Ingrese sus apellidos">
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="staticEmail" class="col-sm-4 col-form-label font-weight-bold">Nombre Usuario:</label>
+                                    <label for="staticEmail" class="col-sm-4 col-form-label font-weight-bold" style="color: white">Nombre Usuario:</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" name="userName" placeholder="Cree nombre de usuario" >
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="staticEmail" class="col-sm-4 col-form-label font-weight-bold">Dni:</label>
+                                    <label for="staticEmail" class="col-sm-4 col-form-label font-weight-bold" style="color: white">Dni:</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" name="dni" placeholder="Ingrese su DNI" >
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="staticEmail" class="col-sm-4 col-form-label font-weight-bold">Telefono:</label>
+                                    <label for="staticEmail" class="col-sm-4 col-form-label font-weight-bold" style="color: white">Telefono:</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" name="telefono" placeholder="Ingrese su número de celular" >
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="staticEmail" class="col-sm-4 col-form-label font-weight-bold">Contraseña:</label>
+                                    <label for="staticEmail" class="col-sm-4 col-form-label font-weight-bold" style="color: white">Contraseña:</label>
                                     <div class="col-sm-8">
                                         <input type="password" class="form-control" name="password" placeholder="Cree una contraseña" >
                                     </div>

@@ -51,8 +51,8 @@ if (isset($_POST['ingresar'])) {
                     <div class="col-12 text-center user-img">
                         <img src="../img/user.png">
                     </div>
-                    <div class="col-12 text-center" COLOR="white">
-                        <h4 class="text-center" >Bienvenido</h4>
+                    <div class="col-12 text-center" >
+                        <h3 class="text-center" style="color: white">Bienvenido</h3>
                     </div>
                     <form method="POST">
                         <div class="mb-3">
