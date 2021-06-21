@@ -1,6 +1,8 @@
 <?php
+session_start();
 include "../bd/autoload.php";
-include './headerLogeado.php';
+include './header.php';
+
 ?>
 <div class="container-fluid">
     <div class="row">
@@ -8,8 +10,7 @@ include './headerLogeado.php';
             <div class="row rounded-3" style="margin-right: 5px;margin-left: 50px; margin-top: 30px;margin-bottom: 30px; background:#0F1E23">
                 <hr width=100%  align="right" size=0>
                 <h4 class="text-white"><i class="fas fa-house-user"></i> Mis Negocios/Servicios</h4>
-                <?php
-                session_start();
+                <?php                
                 $contNegocio = new ControllerNegocio();
                 $negocio = $contNegocio->mostrarNegocioId($_SESSION['idUs']);
                 foreach ($negocio as $neg) {

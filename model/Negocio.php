@@ -8,9 +8,19 @@ class Negocio {
     private $estado;
     private $usuario;
     private $fechaRegistro;
+    private $telefono;
     private $imagen1;
     private $imagen2;
     
+    function getTelefono() {
+        return $this->telefono;
+    }
+
+    function setTelefono($telefono): void {
+        $this->telefono = $telefono;
+    }
+
+        
     function getImagen1() {
         return $this->imagen1;
     }

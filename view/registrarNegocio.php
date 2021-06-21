@@ -1,6 +1,10 @@
 <?php
 include "../bd/autoload.php";
 include './header.php';
+if (isset($_POST['nuevo'])) {
+    $GrabarNegocio = new ControllerNegocio();
+    $GrabarNegocio->guardarNegocio($_POST);
+}
 ?>
 <div class="container-fluid">
     <div class="row">
@@ -13,31 +17,43 @@ include './header.php';
                         <div class="mb-3 row">
                             <label for="staticEmail" class="text-white col-sm-4 col-form-label font-weight-bold">Nombres de Negocio :</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" name="nombres" placeholder="Ingrese su nombre" >
+                                <input type="text" class="form-control" name="nombre" placeholder="Nombre del Negocio" >
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="inputPassword" class="text-white col-sm-4 col-form-label font-weight-bold">RUC :</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" name="apellidos" placeholder="Ingrese sus apellidos">
+                                <input type="text" class="form-control" name="ruc" placeholder="Ruc">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="staticEmail" class="text-white col-sm-4 col-form-label font-weight-bold">Dirección :</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" name="userName" placeholder="Cree nombre de usuario" >
+                                <input type="text" class="form-control" name="direccion" placeholder="Dirección" >
+                            </div>
+                        </div>
+                        <div class="mb-3 row" hidden="">
+                            <label for="staticEmail" class="text-white col-sm-4 col-form-label font-weight-bold">Negocio :</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" value="2" name="usuario" placeholder="Cree nombre de usuario" >
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="staticEmail" class="text-white col-sm-4 col-form-label font-weight-bold">Telefono :</label>
+                            <div class="col-sm-6">
+                                <input type="number" class="form-control" name="telefono" placeholder="Telefono" >
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="staticEmail" class="text-white col-sm-4 col-form-label font-weight-bold">Foto Portada :</label>
                             <div class="col-sm-6">
-                                <input type="file" class="form-control" name="dni" placeholder="Ingrese su DNI" >
+                                <input type="file" class="form-control" name="foto1">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="staticEmail" class="text-white col-sm-4 col-form-label font-weight-bold">Foto Vista :</label>
                             <div class="col-sm-6">
-                                <input type="file" class="form-control" name="imagen" placeholder="Ingrese su número de celular" >
+                                <input type="file" class="form-control" name="foto2">
                             </div>
                         </div>                       
                         <div class="mb-3 row">                                   

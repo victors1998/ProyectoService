@@ -20,21 +20,20 @@ class ControllerNegocio {
     
     
     public function guardarNegocio(array $datos){       
-        $negocio= new Negocios();
-        if (isset($datos['idNegocio']))
+        $negocio = new Negocio();
+        if (isset($datos['idnegocio']))
         {            
-            $negocio->setId_usuario($datos['idNegocio']);
+            $negocio->setId_usuario($datos['idnegocio']);
         }
-        $negocio->setNombres($datos['nombres']);
-        $negocio->setApellidos($datos['apellidos']);
-        $negocio->setTipoUsuario(2);
-        $negocio->setUserName($datos['userName']);
-        $negocio->setPassword($datos['password']);
+        $negocio->setNombre($datos['nombre']);
+        $negocio->setRuc($datos['ruc']);
+        $negocio->setDireccion($datos['direccion']);
         $negocio->setEstado(1);
-        $negocio->setDni($datos['dni']);
-        $negocio->setTelefono($datos['telefono']); 
-        $fechaActual = date('yyyy-mm-dd');
-        $negocio->setFechaRegistro($fechaActual);
+        $negocio->setUsuario($datos['usuario']);
+        $negocio->setFechaRegistro("2021/12/12");
+        $negocio->setTelefono($datos['telefono']);
+        $negocio->setImagen1($datos['foto1']);
+        $negocio->setImagen2($datos['foto2']);       
         $negocio->GuardarNegocio();
     }
 }

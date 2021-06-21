@@ -50,24 +50,23 @@ include '../bd/autoload.php';
                             <a class="nav-link disabled text-light" href="#" tabindex="-1" aria-disabled="true">Sobre Nosotros</a>
                         </li>
                     </ul>
-                    <!--                    <form class="d-flex">
-                                            <input class="form-control me-2" type="search" placeholder="Buscar Servicio" aria-label="Search">
-                                            <button class="btn btn-outline-success me-2" type="submit">Search</button>                      
-                                        </form>-->              
-                    <a class="btn btn-outline-success me-2" href="login.php" name="sesion">Iniciar Sesion</a>   
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Buscar Servicio" aria-label="Search">
+                        <button class="btn btn-success me-2" type="submit">Search</button>                      
+                    </form>              
+                    <a class="btn btn-success me-2" <?php if (session_status() == 2) { ?> hidden="" <?php } ?> href="login.php" name="sesion">Iniciar Sesion</a>   
 
 
-                    <div class="btn-group me-5">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                            <?php
-                            ?> <img src="../img/user.png" class="img-fluid" width="28px" height="28px">
+                    <div class="dropdown" <?php if(session_status() == 1){ ?> hidden="" <?php }?>>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <?php echo "Bienvenido: ". $_SESSION['nom']; ?>
                         </button>
-                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
-                            <form method="POST">
-                                <li><button class="dropdown-item" type="button">Action</button></li>
-                                <li><button class="dropdown-item" type="button">Another action</button></li>
-                                <li><a href="inicio.php <?php session_destroy() ?>" class="dropdown-item">Cerrar Sesión</a></li>
-                            </form>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                            <li><a class="dropdown-item active" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="inicio.php<?php session_destroy(); ?>">Salir</a></li>
                         </ul>
                     </div>
                 </div>

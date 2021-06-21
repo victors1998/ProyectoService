@@ -54,7 +54,7 @@ include './header.php';
                 <?php
             } else {
                 ?>
-                <center><p class="text-white">No tiene Servicios..</p></center>
+                <center><p class="text-white">Este Negocio No Tiene servicios..</p></center>
                 <?php } ?>
         </div>     
     </div>

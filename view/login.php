@@ -1,18 +1,18 @@
 <?php
+session_start();
 if (isset($_POST['ingresar'])) {
     include '../model/Usuarios.php';
     $empleado = new Usuarios();
     $empleado->setUserName($_POST['user']);
     $empleado->setPassword($_POST['pass']);
-    if ($empleado->ValidarUsuario()) {        
+    if ($empleado->ValidarUsuario()) {              
         $_SESSION['idUs'] = $empleado->getIdUsuario();
         $_SESSION['nom'] = $empleado->getNombres();
         $_SESSION['ape'] = $empleado->getApellidos();
         $_SESSION['tipUs'] = $empleado->getTipoUsuario();
         $_SESSION['est'] = $empleado->getEstado();
         $_SESSION['dni'] = $empleado->getDni();
-        $_SESSION['fechReg'] = $empleado->getFechaRegistro();   
-        session_start();
+        $_SESSION['fechReg'] = $empleado->getFechaRegistro();          
         header("Location: ../view/inicioLogueado.php");
     } else {
         header("Location: ../view/login.php");
@@ -42,7 +42,7 @@ if (isset($_POST['ingresar'])) {
             rel="stylesheet"
             />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <title>Iniciar sesión</title>
+        <title>Login</title>
     </head>
     <body>
         <div class="modal-dialog">
@@ -65,6 +65,7 @@ if (isset($_POST['ingresar'])) {
                         </div>                                              
                         <div class="mb-3">
                             <button name="ingresar" type="submit" class="btn btn-success"><i class="fas fa-sign-in-alt"></i>  Ingresar</button>
+                            <a href="inicio.php" type="submit" class="btn btn-danger"><i class="fas fa-sign-in-alt"></i>  Salir</a>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label"><a href="#" class="link-info">¿Se te olvido la contraseña?</a></label>
