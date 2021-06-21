@@ -6,11 +6,22 @@ class Servicios {
     private $titulo;
     private $descripcion;
     private $estado;
-    private $Usuario;
     private $fechaRegistro;
     private $categoria;
     private $idNegocio;
+    private $imagen1;
+    
+    
+    
+    function getImagen1() {
+        return $this->imagen1;
+    }
 
+    function setImagen1($imagen1): void {
+        $this->imagen1 = $imagen1;
+    }
+
+    
     function getIdServicio() {
         return $this->idServicio;
     }
@@ -27,9 +38,6 @@ class Servicios {
         return $this->estado;
     }
 
-    function getUsuario() {
-        return $this->Usuario;
-    }
 
     function getFechaRegistro() {
         return $this->fechaRegistro;
@@ -57,10 +65,6 @@ class Servicios {
 
     function setEstado($estado): void {
         $this->estado = $estado;
-    }
-
-    function setUsuario($Usuario): void {
-        $this->Usuario = $Usuario;
     }
 
     function setFechaRegistro($fechaRegistro): void {
@@ -104,5 +108,39 @@ class Servicios {
         return $conn->query($sql);
     }
     
+<<<<<<< HEAD
+=======
+    function GuardarServicio() {
+        require_once '../bd/ConexionDB.php';
+        $conexionDB = new ConexionDB();
+        $conn = $conexionDB->abrirConexion();
+        if ((int) $this->idServicio != 0) {
+            $sql = "UPDATE servicio SET "
+                    . "titulo='" . $this->titulo. "',"
+                    . "descripcion='" . $this->descripcion . "',"
+                    . "estado='" . $this->estado . "',"               
+                    . "categoria='" . $this->categoria. "'," 
+                    . "idNegocio='" . $this->idNegocio . "'"
+                    . "imagen1='" . $this->imagen1 . "'"
+                    
+                    . " WHERE idnegocio=" . $this->idnegocio;
+        } else {
+            $sql = "INSERT INTO servicio(titulo, descripcion,fecha_registro, id_categoria,idnegocio,estado, imagen1) VALUES "
+                    . "('" . $this->titulo . "',"
+                    . "'" . $this->descripcion . "',"
+                    . "'" . $this->fechaRegistro . "',"
+                    . "'" . $this->categoria . "',"
+                    . "'" . $this->idNegocio . "',"
+                    . "'" . $this->estado . "',"
+                    . "'" . $this->telefono . "',"
+                    . "'" . $this->imagen1 . "'," 
+          
+                    . ")";
+        }
+
+        $conn->query($sql);
+        $conexionDB->cerrarConexion();
+    }
+>>>>>>> d583eba602f38ab0a55571e0a5cfc78bf78255d3
 
 }
