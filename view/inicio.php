@@ -9,21 +9,22 @@ include './header.php';
                 <hr width=100%  align="right" size=0>
                 <h4 class="text-white"><i class="fas fa-house-user"></i> Publicaciones Recientes</h4>
                 <?php
-                $contServicios = new ControladorServicio();
-                $servicio = $contServicios->mostrarServicio();
+                $contServicios = new ControllerNegocio();
+                $servicio = $contServicios->mostrarNegocioIdNegocio();
                 foreach ($servicio as $ser) {
                     ?>
                     <div class="col-3">                   
                         <hr width=100%  align="right" size=0>
-                        <div class="card" style="width: 15rem; height: 22rem;">
-                            <img src="../img/<?php echo $ser['imagen1'];?>" class="card-img-top" alt="...">
+                        <div class="card" style="width: 15rem; height: 25rem;">
+                            <img src="../img/<?php echo $ser['imagen1']; ?>" class="card-img-top" style="height: 8rem;">
                             <div class="card-body" style="height: 100px">
-                                <center><h6 class="card-text"><?php echo $ser['titulo'] ?></h6></center>
-                                <p><b>Descripción:</b> <?php echo $ser['descripcion'] ?></p>
-                                <p><b>F.Publicación: </b><?php echo $ser['fecha_registro'] ?></p>                           
+                                <center><p class="card-text bg-primary"><?php echo $ser['nombre']; ?></p></center>
+                                <p><b>Dirección: </b><?php echo $ser['direccion']; ?></p>
+                                <p><b>F.Publicación: </b><?php echo $ser['fecha_registro']; ?></p>
+                                <p><b>Telefono: </b><?php echo $ser['telefono']; ?></p>
                             </div>
                             <div class="card-footer">
-                                <a type="submit" href="detalleNegocios.php?idP=<?php echo $ser['idServicio']; ?>" name="detalles" class="btn btn-primary">Mas Detalles</a>
+                                <a type="submit" href="detalleNegocios.php?idP=<?php echo $ser['idnegocio']; ?>" name="detalles" class="btn btn-primary">Mas Detalles</a>
                             </div>
                         </div>
                         <hr width=100%  align="right" size=0>
@@ -40,9 +41,10 @@ include './header.php';
                     $cat = $contCategoria->mostrarCategoria();
                     foreach ($cat as $categoria) {
                         ?>
-                    <a href="mostrarPorCategoria.php?idC=<?php echo $categoria['idcategoria'] ?>"
-                       class="text-white border-bottom"><?php echo $categoria['nombre_categoria'] ?></a></br>
-                    <?php } ?>
+                        <a href="mostrarPorCategoria.php?idC=<?php echo $categoria['idcategoria'] ?>"
+                           class="fs-4 text-white" style="text-decoration: none;">
+                            <?php echo $categoria['nombre_categoria'] ?></a></br>
+                        <?php } ?>
                 </div>
             </div>           
         </div>

@@ -7,8 +7,13 @@ class ControllerNegocio {
         return $negocio->MostrarNegocioId($id);
     }
     
-    function mostrarNegocioIdServicio($id) {
+    function mostrarNegocioIdNegocio() {
         $negocio = new Negocio();
-        return $negocio->MostrarNegocioId($id);
+        return $negocio->MostrarNegocioIdNegocio();
+    }
+    
+    function mostrarNegocioIdP($id) {
+        $negocio = new Negocio();
+        return $negocio->MostrarNegocioIdP($id);
     }
 }

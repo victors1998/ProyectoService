@@ -74,13 +74,20 @@ class Negocio {
         return $conn->query($sql);
     }
     
-    function MostrarNegocioIdServicio($id) {
+    function MostrarNegocioIdNegocio() {
         include '../bd/ConexionDB.php';
         $conexionDB = new ConexionDB();
         $conn = $conexionDB->abrirConexion();
-        $sql = "SELECT n.idnegocio, n.nombre, n.ruc, n.direccion, n.fecha_registro, s.idServicio
-                FROM negocio as n INNER JOIN servicio as s ON n.idnegocio=s.idnegocio
-                WHERE s.idServicio=".$id;
+        $sql = "SELECT * FROM negocio";
+        $conexionDB->cerrarConexion();
+        return $conn->query($sql);
+    }
+    
+    function MostrarNegocioIdP($id) {
+        include '../bd/ConexionDB.php';
+        $conexionDB = new ConexionDB();
+        $conn = $conexionDB->abrirConexion();
+        $sql = "SELECT * FROM negocio WHERE idnegocio=".$id;
         $conexionDB->cerrarConexion();
         return $conn->query($sql);
     }

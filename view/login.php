@@ -1,18 +1,18 @@
 <?php
-session_start();
 if (isset($_POST['ingresar'])) {
     include '../model/Usuarios.php';
     $empleado = new Usuarios();
     $empleado->setUserName($_POST['user']);
     $empleado->setPassword($_POST['pass']);
-    if ($empleado->ValidarUsuario()) {
+    if ($empleado->ValidarUsuario()) {        
         $_SESSION['idUs'] = $empleado->getIdUsuario();
         $_SESSION['nom'] = $empleado->getNombres();
         $_SESSION['ape'] = $empleado->getApellidos();
         $_SESSION['tipUs'] = $empleado->getTipoUsuario();
         $_SESSION['est'] = $empleado->getEstado();
         $_SESSION['dni'] = $empleado->getDni();
-        $_SESSION['fechReg'] = $empleado->getFechaRegistro();
+        $_SESSION['fechReg'] = $empleado->getFechaRegistro();   
+        session_start();
         header("Location: ../view/inicioLogueado.php");
     } else {
         header("Location: ../view/login.php");

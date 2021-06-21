@@ -37,7 +37,7 @@ include './header.php';
                         <div class="mb-3 row">
                             <label for="staticEmail" class="text-white col-sm-4 col-form-label font-weight-bold">Foto Vista :</label>
                             <div class="col-sm-6">
-                                <input type="file" class="form-control" name="telefono" placeholder="Ingrese su número de celular" >
+                                <input type="file" class="form-control" name="imagen" placeholder="Ingrese su número de celular" >
                             </div>
                         </div>                       
                         <div class="mb-3 row">                                   

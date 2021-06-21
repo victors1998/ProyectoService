@@ -1,5 +1,6 @@
 <?php
 include '../bd/autoload.php';
+ session_start();
 ?>
 
 <!doctype html>
@@ -54,7 +55,9 @@ include '../bd/autoload.php';
                                             <input class="form-control me-2" type="search" placeholder="Buscar Servicio" aria-label="Search">
                                             <button class="btn btn-outline-success me-2" type="submit">Search</button>                      
                                         </form>-->              
-                    <a class="btn btn-outline-success me-2" href="login.php" name="sesion">Iniciar Sesion</a>   
+                    <a class="btn btn-outline-success me-2" <?php if(session_status() == 2){ ?> hidden=""
+                    <?php } ?> 
+                       href="login.php" name="sesion"><?php echo session_status(); ?>Iniciar Sesion</a>   
 
 
                     <div class="btn-group me-5">
@@ -74,3 +77,5 @@ include '../bd/autoload.php';
             </div>
         </div>
     </nav>
+
+

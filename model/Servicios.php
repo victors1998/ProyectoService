@@ -90,7 +90,7 @@ class Servicios {
         $conn = $conexionDB->abrirConexion();
         $sql = "SELECT s.idServicio, s.titulo, s.descripcion, c.nombre_categoria, s.idnegocio
                 FROM servicio as s INNER JOIN
-                categoria as c ON s.id_categoria=c.idcategoria WHERE s.idServicio=" . $id;
+                categoria as c ON s.id_categoria=c.idcategoria WHERE s.idnegocio=" . $id;
         $conexionDB->cerrarConexion();
         return $conn->query($sql);
     }

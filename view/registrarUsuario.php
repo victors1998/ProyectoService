@@ -30,13 +30,14 @@ if (isset($_POST['nuevo'])) {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <title>Registrar usuario</title>
     </head>
-    <body>
+    <body style="background: url(../img/plaza_huanuco.jpg) no-repeat center center fixed;
+    background-size: cover;">
         <div class="container">
             <div class="row">                
                 <div class="col-3">
 
                 </div>
-                <div class="col-6 border border-white rounded" style="margin-top: 100px">
+                <div class="col-6 rounded" style="margin-top: 100px">
                     <div class="box boxmx-auto-info">
                         <div class="modal-content container" style="background: #0F1E23">
                             <center> <h3 class="box-title" style="color: white">Registro de Usuario</h3></center>
@@ -81,7 +82,7 @@ if (isset($_POST['nuevo'])) {
                                     <div class="box-footer">
                                         <center>
                                             <button class="btn btn-success" name="nuevo" type="submit">Registrarse</button>
-                                            <button class="btn btn-danger" name="cancelar" type="submit">Cancelar</button>   
+                                            <a class="btn btn-danger" href="inicio.php" name="cancelar" type="submit">Cancelar</a>   
                                         </center>                                      
                                     </div>
                                 </div>
@@ -92,12 +93,7 @@ if (isset($_POST['nuevo'])) {
                 <div class="col-3">                    
                 </div>
             </div>
-        </div>
-        <?php
-        if (isset($_POST['cancelar'])) {
-            header("Location: ../view/inicio.php");
-        }
-        ?>      
+        </div>             
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
         ></script>

@@ -32,6 +32,10 @@ include './header.php';
             </div>            
         </div>
         <div class="col-md-2">
+            <?php
+           if($idU>0){
+                
+            ?>
             <div class="row" style="margin-right: 2px;margin-left: 2px; margin-top: 30px;margin-bottom: 10px">
                 <div class="col col-lg-12 rounded-3" style="background:#0F1E23">
                     <h4 class="text-white"><i class="fas fa-house-user"></i> Mis Acciones</h4>
@@ -39,7 +43,7 @@ include './header.php';
                     <h5 class="text-white"><a href="registrarServicios.php"> Añadir Servicios</a></h5>
                     <h5 class="text-white"><a href="registrarProductos.php"> Añadir Productos</a></h5> 
                 </div>
-            </div> 
+            </div>
             <div class="row" style="margin-right: 2px;margin-left: 2px; margin-top: 10px;margin-bottom: 30px">
                 <div class="col col-lg-12 rounded-3" style="background:#0F1E23">
                     <h4 class="text-white"><i class="fas fa-house-user"></i> Categorias</h4>
@@ -51,7 +55,25 @@ include './header.php';
                     <a href="mostrarPorCategoria.php?idC=<?php echo $categoria['idcategoria'] ?>" class="text-white border-bottom"><?php echo $categoria['nombre_categoria'] ?></a>
                     <?php } ?>
                 </div>
-            </div>           
+            </div>
+            <?php 
+           }else{
+            ?>
+            <div class="row" style="margin-right: 2px;margin-left: 2px; margin-top: 10px;margin-bottom: 30px">
+                <div class="col col-lg-12 rounded-3" style="background:#0F1E23">
+                    <h4 class="text-white"><i class="fas fa-house-user"></i> Categorias</h4>
+                    <?php
+                    $contCategoria = new ControllerCategoria();
+                    $cat = $contCategoria->mostrarCategoria();
+                    foreach ($cat as $categoria) {
+                        ?>
+                    <a href="mostrarPorCategoria.php?idC=<?php echo $categoria['idcategoria'] ?>" class="text-white border-bottom"><?php echo $categoria['nombre_categoria'] ?></a>
+                    <?php } ?>
+                </div>
+            </div> 
+            <?php
+           }
+            ?>
         </div>
     </div>
 </div>

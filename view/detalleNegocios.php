@@ -10,7 +10,7 @@ include './header.php';
         <div class="col-9" style="margin-top: 30px; margin-bottom: 30px; background:#0F1E23;">          
             <?php
             $contNegocioId = new ControllerNegocio();
-            $NegocioId = $contNegocioId->mostrarNegocioIdServicio($_GET['idP']);
+            $NegocioId = $contNegocioId->mostrarNegocioIdP($_GET['idP']);
             foreach ($NegocioId as $idNeg) {
                 ?>
             <center><h1 class="text-white" style="margin-top: 20px"><?php echo $idNeg['nombre']; ?></h1></center></br>
@@ -46,7 +46,7 @@ include './header.php';
                                 <td><?php echo $negId['titulo']; ?></td>
                                 <td><?php echo $negId['descripcion']; ?></td>
                                 <td><?php echo $negId['nombre_categoria']; ?></td>
-                                <td><a class="btn btn-success" href="#">Ver Productos</a></td>
+                                <td><a class="btn btn-success" href="detalleNegocios.php?idP="<?php echo $negId['idServicio'];?> >Ver Productos</a></td>
                             </tr>
                         <?php } ?>   
                     </tbody>
