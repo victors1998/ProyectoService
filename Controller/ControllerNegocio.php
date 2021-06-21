@@ -16,4 +16,25 @@ class ControllerNegocio {
         $negocio = new Negocio();
         return $negocio->MostrarNegocioIdP($id);
     }
+    
+    
+    
+    public function guardarNegocio(array $datos){       
+        $negocio= new Negocios();
+        if (isset($datos['idNegocio']))
+        {            
+            $negocio->setId_usuario($datos['idNegocio']);
+        }
+        $negocio->setNombres($datos['nombres']);
+        $negocio->setApellidos($datos['apellidos']);
+        $negocio->setTipoUsuario(2);
+        $negocio->setUserName($datos['userName']);
+        $negocio->setPassword($datos['password']);
+        $negocio->setEstado(1);
+        $negocio->setDni($datos['dni']);
+        $negocio->setTelefono($datos['telefono']); 
+        $fechaActual = date('yyyy-mm-dd');
+        $negocio->setFechaRegistro($fechaActual);
+        $negocio->GuardarNegocio();
+    }
 }
